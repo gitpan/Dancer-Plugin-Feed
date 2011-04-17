@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               Dancer-Plugin-Feed
-version:            0.1
+version:            0.2
 abstract:           easy to generate feed rss or atom for Dancer applications.
 author:
     - Natal Ngétal <hobbestigrou@erakis.im>
@@ -11,7 +11,7 @@ configure_requires:
 build_requires:
     ExtUtils::MakeMaker:  0
 requires:
-    Dancer:      1.175
+    Dancer:      1.2001
     Test::More:  0
     XML::Feed:   0
 no_index:
