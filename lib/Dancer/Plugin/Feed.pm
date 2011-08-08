@@ -4,7 +4,7 @@ use Dancer ':syntax';
 use Dancer::Plugin;
 use XML::Feed;
 
-our $VERSION = '0.4';
+our $VERSION = '0.5';
 
 my $ct = {
     atom => 'application/atom+xml',
@@ -14,9 +14,8 @@ my $ct = {
 my @feed_properties =
   qw/format title base link tagline description author language copyright self_link modified/;
 
-my @entries_properties = qw/
-  title base link content summary category tags author id issued modified
-  /;
+my @entries_properties =
+  qw/title base link content summary category tags author id issued modified enclosure/;
 
 register create_feed => sub {
     my (%params) = @_;
