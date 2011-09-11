@@ -4,7 +4,7 @@ use Dancer ':syntax';
 use Dancer::Plugin;
 use XML::Feed;
 
-our $VERSION = '0.5';
+our $VERSION = '0.6';
 
 my $ct = {
     atom => 'application/atom+xml',
@@ -113,14 +113,10 @@ Dancer::Plugin::Feed - easy to generate feed rss or atom for Dancer applications
         my $feed = create_feed(
             format  => params->{format},
             title   => 'my great feed',
-            entries => _get_entries(),
+            entries => [ map { title => "entry $_" }, 1 .. 10 ],
         );
         return $feed;
     };
-
-    sub _get_entries {
-        [ map { { title => "entry $_" } } ( 1 .. 10 ) ];
-    }
 
     dance;
 
