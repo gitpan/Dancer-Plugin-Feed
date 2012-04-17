@@ -1,24 +1,27 @@
---- #YAML:1.0
-name:               Dancer-Plugin-Feed
-version:            0.6
-abstract:           easy to generate feed rss or atom for Dancer applications.
+---
+abstract: 'Easy to generate feed rss or atom for Dancer applications.'
 author:
-    - Natal Ngétal <hobbestigrou@erakis.im>
-license:            unknown
-distribution_type:  module
-configure_requires:
-    ExtUtils::MakeMaker:  0
+  - 'Natal Ngétal'
 build_requires:
-    ExtUtils::MakeMaker:  0
-requires:
-    Dancer:      1.2001
-    Test::More:  0
-    XML::Feed:   0
-no_index:
-    directory:
-        - t
-        - inc
-generated_by:       ExtUtils::MakeMaker version 6.56
+  Dancer::Test: 0
+  Module::Build: 0.3601
+  Test::More: 0
+  strict: 0
+  t::lib::TestApp: 0
+  warnings: 0
+configure_requires:
+  ExtUtils::MakeMaker: 6.30
+  Module::Build: 0.3601
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 4.300009, CPAN::Meta::Converter version 2.120630'
+license: perl
 meta-spec:
-    url:      http://module-build.sourceforge.net/META-spec-v1.4.html
-    version:  1.4
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: Dancer-Plugin-Feed
+requires:
+  Dancer: 0
+  Dancer::Exception: 0
+  Dancer::Plugin: 0
+  XML::Feed: 0
+version: 0.7

@@ -1,10 +1,13 @@
+Build.PL
 Changes
+INSTALL
+LICENSE
 MANIFEST
+META.yml
 Makefile.PL
 README
-lib/Dancer/Plugin/Feed.pm 
+dist.ini
+lib/Dancer/Plugin/Feed.pm
 t/00-load.t
-t/01-basic.t 
-t/lib/TestApp.pm 
-TODO
-META.yml                                 Module meta-data (added by MakeMaker)
+t/01-basic.t
+t/lib/TestApp.pm
