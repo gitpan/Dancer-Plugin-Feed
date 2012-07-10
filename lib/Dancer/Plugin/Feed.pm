@@ -8,7 +8,7 @@
 #
 package Dancer::Plugin::Feed;
 {
-  $Dancer::Plugin::Feed::VERSION = '0.7';
+  $Dancer::Plugin::Feed::VERSION = '0.8';
 }
 
 use Dancer ':syntax';
@@ -134,7 +134,7 @@ Dancer::Plugin::Feed - Easy to generate feed rss or atom for Dancer applications
 
 =head1 VERSION
 
-version 0.7
+version 0.8
 
 =head1 SYNOPSIS
 

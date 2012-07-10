@@ -11,7 +11,6 @@ my %module_build_args = (
     "Module::Build" => "0.3601",
     "Test::More" => 0,
     "strict" => 0,
-    "t::lib::TestApp" => 0,
     "warnings" => 0
   },
   "configure_requires" => {
@@ -23,13 +22,13 @@ my %module_build_args = (
     "Natal Ng\303\251tal"
   ],
   "dist_name" => "Dancer-Plugin-Feed",
-  "dist_version" => "0.7",
+  "dist_version" => "0.8",
   "license" => "perl",
   "module_name" => "Dancer::Plugin::Feed",
   "recommends" => {},
   "recursive_test_files" => 1,
   "requires" => {
-    "Dancer" => 0,
+    "Dancer" => "1.2001",
     "Dancer::Exception" => 0,
     "Dancer::Plugin" => 0,
     "XML::Feed" => 0
