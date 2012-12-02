@@ -32,7 +32,7 @@ my %WriteMakefileArgs = (
     "Dancer::Plugin" => 0,
     "XML::Feed" => 0
   },
-  "VERSION" => "0.8",
+  "VERSION" => "1.123370",
   "test" => {
     "TESTS" => "t/*.t"
   }

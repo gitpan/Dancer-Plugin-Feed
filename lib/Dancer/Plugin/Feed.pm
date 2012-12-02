@@ -8,7 +8,7 @@
 #
 package Dancer::Plugin::Feed;
 {
-  $Dancer::Plugin::Feed::VERSION = '0.8';
+  $Dancer::Plugin::Feed::VERSION = '1.123370';
 }
 
 use Dancer ':syntax';
@@ -38,7 +38,7 @@ my @entries_properties =
   qw/title base link content summary category tags author id issued modified enclosure/;
 
 register create_feed => sub {
-    my (%params) = @_;
+    my ($dsl, %params) = plugin_args(@_);
 
     my $format = _validate_format(\%params);
 
@@ -52,13 +52,13 @@ register create_feed => sub {
 };
 
 register create_atom_feed => sub {
-    my (%params) = @_;
+    my ($dsl, %params) = plugin_args(@_);
 
     _create_atom_feed(\%params);
 };
 
 register create_rss_feed => sub {
-    my (%params) = @_;
+    my ($dsl, %params) = plugin_args(@_);
 
     _create_rss_feed(\%params);
 };
@@ -120,12 +120,12 @@ sub _create_rss_feed {
     _create_feed('RSS', $params);
 }
 
-register_plugin;
+register_plugin for_versions => [1, 2];
 
 1;
 
-
 __END__
+
 =pod
 
 =head1 NAME
@@ -134,7 +134,7 @@ Dancer::Plugin::Feed - Easy to generate feed rss or atom for Dancer applications
 
 =head1 VERSION
 
-version 0.8
+version 1.123370
 
 =head1 SYNOPSIS
 
@@ -281,4 +281,3 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
