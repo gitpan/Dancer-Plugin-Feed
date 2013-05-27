@@ -1,14 +1,14 @@
 #
 # This file is part of Dancer-Plugin-Feed
 #
-# This software is copyright (c) 2012 by Natal Ngétal.
+# This software is copyright (c) 2013 by Natal Ngétal.
 #
 # This is free software; you can redistribute it and/or modify it under
 # the same terms as the Perl 5 programming language system itself.
 #
 package Dancer::Plugin::Feed;
 {
-  $Dancer::Plugin::Feed::VERSION = '1.123370';
+  $Dancer::Plugin::Feed::VERSION = '1.131470';
 }
 
 use Dancer ':syntax';
@@ -44,9 +44,11 @@ register create_feed => sub {
 
     if ($format =~ /^atom$/i) {
         _create_atom_feed(\%params);
-    }elsif($format =~/^rss$/i) {
+    }
+    elsif($format =~/^rss$/i) {
         _create_rss_feed(\%params);
-    }else{
+    }
+    else{
         raise FeedInvalidFormat => $format;
     }
 };
@@ -82,9 +84,8 @@ sub _validate_format {
 sub _create_feed {
     my ($format, $params) = @_;
 
-    my $entries = delete $params->{entries};
-
-    my $feed = XML::Feed->new($format);
+    my $entries  = delete $params->{entries};
+    my $feed     = XML::Feed->new($format);
     my $settings = plugin_setting;
 
     map {
@@ -120,7 +121,7 @@ sub _create_rss_feed {
     _create_feed('RSS', $params);
 }
 
-register_plugin for_versions => [1, 2];
+register_plugin for_versions => [1];
 
 1;
 
@@ -134,7 +135,7 @@ Dancer::Plugin::Feed - Easy to generate feed rss or atom for Dancer applications
 
 =head1 VERSION
 
-version 1.123370
+version 1.131470
 
 =head1 SYNOPSIS
 
@@ -275,7 +276,7 @@ Natal Ngétal
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2012 by Natal Ngétal.
+This software is copyright (c) 2013 by Natal Ngétal.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

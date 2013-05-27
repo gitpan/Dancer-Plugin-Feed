@@ -22,7 +22,7 @@ my %module_build_args = (
     "Natal Ng\303\251tal"
   ],
   "dist_name" => "Dancer-Plugin-Feed",
-  "dist_version" => "1.123370",
+  "dist_version" => "1.131470",
   "license" => "perl",
   "module_name" => "Dancer::Plugin::Feed",
   "recommends" => {},
